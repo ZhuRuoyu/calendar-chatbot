@@ -8,11 +8,8 @@ Questions:
 
 
 ## Fundamental Model 
-use GPT-3.5 API to do entity recognition (find keywords)
+use GPT-3.5 API to detect intentions and extract the args/entities, and make a function call (call Google Calendar API)
 
-use the keywords to call google calendar API
-
-return the request 
 
 
 ## Customized Model
