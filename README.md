@@ -40,21 +40,27 @@ How: use Transformer (pre-trained BERT `sentence_transformers` library or a fine
 
 Structure: Build a 10-class classification model to classify the intent of users' input
 
-### Step 2: entities recognition -> call Google Calendar API accordingly
+
+### Step 2: entities recognition
     
-Use name entities recognition (NER) method to extract key information for the selected pre-build sentence, and call corresponding google calendar API based on the information extracted. 
+Use name entities recognition (NER) method to extract key information for the selected pre-build sentence
 
 #### Challenge 
 1. Q: What if the user's input (request) is beyond the scope?
    
-   A: First, try to match the best sentences. Seconc, make a follow up question (let the user providing more details or asking in a different way)
+   A: First, try to match the best sentences. Second, make a follow up question (let the user providing more details or asking in a different way)
   
 2. Q: The model can not remember context from the past.
 
   A: Give the whole conversation (or 2 most recent sentence) to the model and find the best match again.
         
 
+### Step 3: call Google Calendar API accordingly
+call corresponding google calendar API based on the information extracted. 
 
-### Step 3: combine the retrived information into a complete sentence
+
+
+
+### Step 4: combine the retrived information into a complete sentence
 
 ... TBC
