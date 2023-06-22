@@ -1,0 +1,3 @@
+@Author Ahmad Khaled Sadeq Alshraideh
+
+Accessing Google Calendar Api for commiting changes in the calendar via. Python. 
