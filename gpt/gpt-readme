@@ -1,2 +1,3 @@
-author: Nishit 
-use chatGPT-3.5 api & google calendar api to run the event-driven functions
+@author: Nishit Rathod 
+Using ChatGPT-3.5 API & Google Calendar API, we are trying to run the event-driven functions by calling them. 
+This will further help in creating, updating, rescheduling and deleting the event on our google calendar.
