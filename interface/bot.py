@@ -23,20 +23,55 @@ async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #Responses
 #Here We can use our model!
 def handle_response(text: str) -> str:
-    # Create your own response logic
+
     processed: str = text.lower()
 
-    if 'Hello' in text:
-        return 'Hey there!'
+    if 'hello' in processed or 'hi' in processed:
+        return "Hello! I can help you with getting event details, checking available time, and creating/updating/rescheduling/deleting events."
 
-    if 'how are you' in text:
-        return 'I\'m good!'
+    if 'create event' in processed:
+        return "Sure! Please provide the start time, end time, and location of the event."
 
-    if 'i love python' in text:
-        return 'Remember to subscribe!'
+    if 'get event detail' in processed:
+        return "Sure! Fetching the event details."
 
-    if  'What\'s up' in text:
-        return 'I am good how are you '
+    if 'update event' in processed:
+        return "Sure! What changes do you want to make in your event?"
+
+
+    if 'reschedule event' in processed:
+        return "when do you want to reschedule the event?"
+
+    if 'start time' in processed and 'end time' in processed and 'location' in processed:
+        # Extract the start time, end time, and location from the user's input
+        start_time = extract_start_time(processed)  # Implement a function to extract the start time
+        end_time = extract_end_time(processed)  # Implement a function to extract the end time
+        location = extract_location(processed)  # Implement a function to extract the location
+
+        response = f"Great! You entered the following details:\n" \
+                   f"Start time: {start_time}\n" \
+                   f"End time: {end_time}\n" \
+                   f"Location: {location}\n" \
+                   f"Is that correct?"
+
+        return response
+
+    # Handle other intents and scenarios
+    # ...
+
+
+
+    if 'missing information' in processed:
+        return "I need more information to create/update/reschedule/delete the event. Could you please provide the start time, end time, or location?"
+
+    if 'not sure' in processed:
+        return "Do you want to create an event, update an event, or delete an event?"
+
+    if 'no intents found' in processed:
+        return "Sorry, I don't understand. Can you please rephrase your request? I can help with tasks like getting event details, checking available time, and more."
+
+    if 'exit' in processed or 'bye' in processed:
+        return "Thank you for using the Calendar Bot. Have a great day!"
 
     return 'I don\'t understand'
 
@@ -86,3 +121,4 @@ if __name__ == '__main__':
     print('Polling...')
     # Run the bot
     app.run_polling(poll_interval=5)
+#This is not the final file. 
