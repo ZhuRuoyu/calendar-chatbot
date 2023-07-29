@@ -1,3 +1,56 @@
 @author: Nishit Rathod 
 Using ChatGPT-3.5 API & Google Calendar API, we are trying to run the event-driven functions by calling them. 
-This will further help in creating, updating, rescheduling and deleting the event on our google calendar.
+
+## Personalized Calendar Chatbot
+
+This Python program is a personalized calendar chatbot that interacts with the user and performs actions related to Google Calendar. It uses the Google Calendar API and the OpenAI API to handle calendar operations and natural language processing, respectively.
+
+### Dependencies
+
+To run this code, you need to install the following Python packages using `pip`:
+
+- `openai`
+- `google-api-python-client`
+
+### Functionality
+
+1. **Google Calendar Functions**:
+
+   - `get_calendar_events`: Retrieves events on a given date from Google Calendar.
+   - `create_event`: Creates a new event in Google Calendar.
+   - `delete_event`: Deletes an event from Google Calendar.
+   - `get_free_busy_info`: Retrieves free/busy information from Google Calendar.
+   - `update_event`: Updates an existing event in Google Calendar.
+   - `reschedule_event`: Reschedules an event to a new time.
+
+2. **Conversation Context**:
+
+   The code sets up a list of predefined `functions` that describe the functionalities available for the chatbot to perform with Google Calendar.
+
+   It also defines a conversation `context` with a series of user and assistant messages, simulating a conversation with the chatbot. The chatbot uses this context to maintain the flow of the conversation.
+
+### Usage
+
+1. Replace the placeholder values for the Google Calendar API credentials and OpenAI API key.
+
+2. Run the program.
+
+3. The chatbot will initiate a conversation with the user and prompt for inputs related to Google Calendar.
+
+4. The user can provide commands for the chatbot to perform various actions like querying events, creating, updating, rescheduling, or deleting events.
+
+5. The chatbot will respond accordingly, interacting with the user and the Google Calendar API.
+
+6. The conversation continues until the user decides to exit by typing "exit," "quit," or "bye."
+
+### Note
+
+This code requires valid API credentials for both the Google Calendar API and the OpenAI API. Make sure to replace the placeholder values with your actual credentials before running the code.
+
+For the Google Calendar API, you need to set up a service account and obtain the JSON credentials file.
+
+For the OpenAI API, you should have an API key to access the GPT-3.5 model for natural language processing.
+
+### Disclaimer
+
+This code was last tested with the provided dependencies and APIs as of the knowledge cutoff date in July 2023. Please ensure that you have updated dependencies and API configurations to ensure smooth execution.
