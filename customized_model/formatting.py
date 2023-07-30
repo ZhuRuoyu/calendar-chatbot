@@ -1,7 +1,7 @@
 #formatting
 '''
 function_name_1 = 'reschedule_event'
-arg_dict = {'START_TIME': '9am', 'END_TIME': 'until 5pm'}
+arg_dict = {'START_TIME': '9am', 'END_TIME': 'until 5pm', 'DURATION': '[0,2,0]'}
 
 '''
 from datetime import datetime, timedelta
