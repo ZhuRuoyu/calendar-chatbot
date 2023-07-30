@@ -107,15 +107,14 @@ class TimeFormat:
 
     def end_time_format(self):
       #end_time = '2023-07-29 01:00:00'
-      if 'END_TIME' in self.arg_dict.keys():
-        print('end time given')
+      if 'END_TIME' in self.arg_dict.keys(): #end time given
 
         end_time_str = self.arg_dict['END_TIME']
         matches_end   = list(datefinder.find_dates(end_time_str))
-        print(matches_end)
+        
 
-      else:
-        print('no end time given ')
+      else: #no end time given
+        
         matches_end = []
 
 
@@ -146,12 +145,12 @@ class TimeFormat:
             end_time = start_time + timedelta(days=duration[0], hours=duration[1], minutes=duration[2])
             end_time = end_time.strftime("%H:%M:%S")
 
-            print('end time is calcuate by duration', end_time)
+            #print('end time is calcuate by duration', end_time)
 
             self.arg_dict['END_TIME'] = end_time
             self.arg_dict['DURATION'] = duration
-            print('dic return before else', end_time)
-            return self.arg_dict #already return
+            
+            return self.arg_dict #already return, dic return before else
 
           else: #no start time detected, need by manual input
             print('variable need: "START_TIME", "DURATION", are  unavailable, need manual input')
@@ -165,7 +164,7 @@ class TimeFormat:
             end_time = end_time_else.strftime("%H:%M:%S")
             break
 
-      print('end time before assign to dict')
+      
       self.arg_dict['END_TIME'] = end_time
 
       return self.arg_dict
