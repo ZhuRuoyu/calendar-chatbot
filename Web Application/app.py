@@ -392,7 +392,7 @@ def process_user_message(user_message, context, credentials):
 
 def main():
     # Set your OpenAI API key here (replace 'YOUR_API_KEY' with your actual API key)
-    openai.api_key = "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"
+    openai.api_key = "YOUR API KEY"
 
     # Initialize the conversation context as an empty list
     conversation_context = st.session_state.get("conversation_context", [])
@@ -425,9 +425,6 @@ def main():
         )
         st.text_area("Chat History:", value=chat_history, height=400, max_chars=None, key="chat_history")
 
-                # Display the assistant's reply in a chat-like interface
-                #st.text_area("Chat History:", value=f"You: {user_input}\nBot: {assistant_reply}", height=400, max_chars=None, key="chat_history")
-    
         # Store the conversation context in session state
         st.session_state["conversation_context"] = conversation_context
 
