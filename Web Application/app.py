@@ -430,10 +430,7 @@ def main():
             [f"You: {message['content']}" if message['role'] == 'user' else f"Bot: {message['content']}" for message in conversation_context]
         )
         st.text_area("Chat History:", value=chat_history, height=400, max_chars=None, key="chat_history")
-
-                # Display the assistant's reply in a chat-like interface
-                #st.text_area("Chat History:", value=f"You: {user_input}\nBot: {assistant_reply}", height=400, max_chars=None, key="chat_history")
-    
+        
         # Store the conversation context in session state
         st.session_state["conversation_context"] = conversation_context
 
@@ -449,15 +446,15 @@ st.markdown(
     """
     <style>
     .stTextInput>div>div>input {
-        background-color: #C10941 !important;
+        background-color: #CCF381 !important;
         border: none !important;
         border-radius: 10px !important;
         padding: 10px !important;
     }
 
     .stButton>button {
-        background-color: #FFFFFF !important;
-        color: #4741BB !important;
+        background-color: #4831D4 !important;
+        color: #FFFFFF !important;
         font-size: 16px !important;
         border: none !important;
         border-radius: 10px !important;
